@@ -4,7 +4,7 @@
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "_includes/syntax";
+/* @import "_includes/syntax"; */
 @import "tailwindcss/utilities";
 
 /* Write your styles below this line. */
