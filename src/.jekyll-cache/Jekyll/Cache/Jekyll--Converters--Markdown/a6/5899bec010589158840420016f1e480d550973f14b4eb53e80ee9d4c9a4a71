@@ -1,6 +1,0 @@
-I"à<p>This was our final Project at the LeWagon Bootcamp. My team set out to build a platform that would better incentives for charities and provide are more enjoyable donating experience.</p>
-
-<p>We used the Alpaca API to interact with the stockmarket, getting prices, buying assets, etc; and Stripe for the Payment. The whole site is build with Bootstrap and some custom css and js. Of course all in Rails.</p>
-
-<p><a href="https://www.longtermgiving.trade">LongTermGiving</a></p>
-:ET
