@@ -10,7 +10,7 @@
 
 # Build settings
 markdown: kramdown
-plugins:
+
 
   #- jekyll-postcss
 
