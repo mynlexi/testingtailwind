@@ -1,0 +1,35 @@
+---
+layout: default
+title: Code
+part1: project
+part2: casestudy
+---
+<div class="container-code">
+
+
+<div class="row-code">
+  <h2>My Projects</h2>
+  {% assign filtered_posts = site.posts | where: 'type', page.part1 %}
+  {% for post in filtered_posts %}
+  
+  <div class="column code-column-projects">
+    
+    {% include card-post.html %}
+    
+  </div>
+  {% endfor %}  
+
+  </div>
+<div class="row-code">
+  <h2>My Casestudies and Codesnippets</h2>
+  {% assign filtered_posts = site.posts | where: 'type', page.part2 %}
+  {% for post in filtered_posts %}
+  <div class="column code-column-casestudy">
+    {% include card-post.html %}
+  
+  </div>
+{% endfor %}  
+  </div>
+</div>
+</div>
+

@@ -1,0 +1,43 @@
+---
+layout: default
+title: Home
+---
+<!doctype html>
+<html>
+  <body>
+    <div class="container w-7/12  mx-auto border py-4 px-6 overflow-hidden" >
+      <div class="w-3/5 mx-auto h-18 lg:h-12 text-center ">
+            <div class=" h-1 lg:h-4"></div>
+           <h1 class="">{{ "hey, I'm Lorenz" | downcase }}</h1>
+      </div>
+      <div class="h-18 lg:h-12 text-center overflow-hidden">
+        <p>I love to build products and I can help you build yours</p>
+        <p>If you have a planet hit me up: sattyp-winner</p>
+      </div>
+      <div class="h-1 lg:h-4"></div>
+      <div class="h-18 lg:h-12 lg:w-1/2 mx-auto flex">
+        <button class="mx-auto bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onclick="window.location.href='/contact.html';"> contact me</button>
+        <button class="mx-auto bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded" onclick="window.location.href='/code.html';">my projects</button>
+      </div>
+    </div>
+
+
+   <div class="max-w-sm rounded overflow-hidden mx-auto ">
+  <div class="container 5/6 mx-auto divide-y-4 divide-gray-400 px-3 py-5">
+    {% assign postsBymonth =
+      site.posts | group_by_exp:"post", "post.date | date: '%B %Y'" %}
+  {% for month in postsBymonth %}
+  <div class=""> 
+    <h1>{{ month.name }}  </h1>
+        {% for post in month.items %}
+        <div class="container m-2 rounded overflow-hidden mx-auto my-5">
+          {% include card-post.html %}
+        </div>
+        {% endfor %}
+      </div>
+     {% endfor %}
+    </div>    
+  </div>
+
+  </body>
+</html>
