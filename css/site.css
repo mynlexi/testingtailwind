@@ -20,5 +20,5 @@ body {
 }
 
 /* Write your styles above this line. */
-
+@import "tailwindcss/utilities";
 @tailwind utilities;
